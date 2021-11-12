@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <center>
+            <img src="./images/dinero.png" alt="dinero">
+        </center>
+        <input id="cantidadDinero" placeholder="Cantidad de Dinero:" required>
+        <div id="conversion">
+            <select name="moneda" class="elegirMoneda" id="monedaOrigen">
+                <option class="listMoneda" value="eligeMoneda">Elige tu moneda</option>
+            </select>
+            <select name="moneda" class="elegirMoneda" id="monedaCambio">
+                <option class="listMoneda" value="eligeMoneda">Elige tu moneda</option>
+            </select>
+            <input type="button" id="buttonConvertir" value="Convertir" onclick="capturarDatos()">
+        </div>
+        <div id="resultado">
+            <label id="labelResultado">Conversión</label>
+            <input id="inputResultado" type="text" disabled>
+        </div>
+        <input id="inputAlert" placeholder="" type="hidden">
+    </div>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
