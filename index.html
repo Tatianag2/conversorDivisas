@@ -9,26 +9,24 @@
 </head>
 
 <body>
-    <div class="container">
-        <center>
-            <img src="./images/dinero.png" alt="dinero">
-        </center>
-        <input id="cantidadDinero" placeholder="Cantidad de Dinero:" required>
-        <div id="conversion">
-            <select name="moneda" class="elegirMoneda" id="monedaOrigen">
-                <option class="listMoneda" value="eligeMoneda">Elige tu moneda</option>
-            </select>
-            <select name="moneda" class="elegirMoneda" id="monedaCambio">
-                <option class="listMoneda" value="eligeMoneda">Elige tu moneda</option>
-            </select>
-            <input type="button" id="buttonConvertir" value="Convertir" onclick="capturarDatos()">
-        </div>
-        <div id="resultado">
-            <label id="labelResultado">Conversión</label>
-            <input id="inputResultado" type="text" disabled>
-        </div>
-        <input id="inputAlert" placeholder="" type="hidden">
-    </div>
+        <div class="container">
+            <div>
+                <img src="./images/dinero.png" alt="dinero">
+            </div>
+            <input id="cantidadDinero" placeholder="Cantidad de Dinero:" required>
+            <div id="conversion">
+                <select name="moneda" class="elegirMoneda" id="monedaOrigen">
+                </select>
+                <select name="moneda" class="elegirMoneda" id="monedaCambio">
+                </select>
+                <input type="button" id="buttonConvertir" value="Convertir" onclick="capturarDatos()">
+            </div>
+            <div id="resultado">
+                <label id="labelResultado">Conversión</label>
+                <input id="inputResultado" type="text" disabled>
+            </div>
+            <input id="inputAlert" placeholder="" type="hidden">
+        </div>    
     <script src="./scripts/script.js"></script>
 </body>
 </html>

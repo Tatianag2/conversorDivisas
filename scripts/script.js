@@ -5,7 +5,7 @@ document.getElementById("resultado").style.display="none";
 var selectUno = document.getElementById("monedaOrigen");
 var selectDos = document.getElementById("monedaCambio");
 //Array con la lista de monedas
-var moneda = ['Dolar','Peso Mexicano','Peso Colombiano','Euro','Libra Esterlina'];
+var moneda = ['Elige tu Moneda','Dolar','Peso Mexicano','Peso Colombiano','Euro','Libra Esterlina'];
 //Funcion que me aniade las options al documento html
 function addOptions(array, select){
     var fragment = document.createDocumentFragment();
