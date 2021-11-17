@@ -35,6 +35,11 @@ function alertaPorNum(domElement){
     domElement.setAttribute("placeholder","Ingrese por favor números");
 }
 
+function alertaPorMonedaOrigen(domElement){
+    domElement.setAttribute("type","disabled");
+    domElement.setAttribute("placeholder","Elija por favor una moneda para realizar la conversión");
+}
+
 //Captura de datos y funcionamiento del programa
 function capturarDatos () {
     let monedaOrigen = document.getElementById("monedaOrigen").value;
@@ -45,6 +50,8 @@ function capturarDatos () {
         alertaPorNum(elemento);
     } else if(cantidad === ""){
         alertaPorCantidad(elemento);
+    }else if(monedaOrigen === "Elige tu Moneda" && monedaCambio !== "Elige tu Moneda"){
+        alertaPorMonedaOrigen(elemento);
     }else {
         convertir(monedaOrigen, monedaCambio, cantidad);
         elemento.setAttribute("type","hidden"); //Vuelvo a esconder las alertas cuando se ingresen valores correctos
@@ -107,9 +114,10 @@ function convertir(monedaOrigen, monedaCambio, cantidad){
         monedaConvertida = cantidad * 1.17;
     } else if(monedaOrigen === "Libra Esterlina" && monedaCambio === "Peso Colombiano"){
         monedaConvertida = cantidad * 5197.03;
-    } else {
+    } else{
         monedaConvertida = cantidad;
     }
     //Adiciono el valor del resultado al elemento de html
-    document.getElementById("inputResultado").value = monedaConvertida;
+    let monedaDecimales = monedaConvertida.toFixed(3);
+    document.getElementById("inputResultado").value = `${cantidad} ${monedaOrigen} equivalen a ${monedaDecimales} ${monedaCambio}`;
 }

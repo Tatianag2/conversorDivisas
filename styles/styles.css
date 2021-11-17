@@ -7,8 +7,7 @@
 body{
     background-image: url('https://papelmatic.com/wp-content/uploads/2020/03/papelmatic-higiene-profesional-microbios-en-el-dinero-980x617.jpg');
     background-size: cover;
-    background-repeat: no-repeat;
-    width: 30%;
+    background-repeat: repeat;
 }
 
 .container{
