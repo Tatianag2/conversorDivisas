@@ -50,7 +50,8 @@ function capturarDatos () {
         alertaPorNum(elemento);
     } else if(cantidad === ""){
         alertaPorCantidad(elemento);
-    }else if(monedaOrigen === "Elige tu Moneda" && monedaCambio !== "Elige tu Moneda"){
+    }else if((monedaOrigen === "Elige tu Moneda" && monedaCambio !== "Elige tu Moneda") || (monedaOrigen !== "Elige tu Moneda" && monedaCambio === "Elige tu Moneda") || (monedaOrigen === "Elige tu Moneda" && monedaCambio === "Elige tu Moneda"))
+    {
         alertaPorMonedaOrigen(elemento);
     }else {
         convertir(monedaOrigen, monedaCambio, cantidad);
@@ -120,4 +121,6 @@ function convertir(monedaOrigen, monedaCambio, cantidad){
     //Adiciono el valor del resultado al elemento de html
     let monedaDecimales = monedaConvertida.toFixed(3);
     document.getElementById("inputResultado").value = `${cantidad} ${monedaOrigen} equivalen a ${monedaDecimales} ${monedaCambio}`;
+
+    document.getElementById("inputResultadoR").value = monedaDecimales;
 }
