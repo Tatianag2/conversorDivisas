@@ -14,12 +14,18 @@
                 <img src="./images/dinero.png" alt="dinero">
             </div>
             <input id="cantidadDinero" placeholder="Cantidad de Dinero:" required>
-            <div id="conversion">
-                <select name="moneda" class="elegirMoneda" id="monedaOrigen">
-                </select>
-                <select name="moneda" class="elegirMoneda" id="monedaCambio">
-                </select>
-                <input type="button" id="buttonConvertir" value="Convertir" onclick="capturarDatos()">
+            <div id="seccionConversion">
+                <div class="conversion">
+                    <select name="moneda" class="elegirMoneda" id="monedaOrigen">
+                    </select>
+                </div>
+                <div class="conversion">
+                    <select name="moneda" class="elegirMoneda" id="monedaCambio">
+                    </select>
+                </div>
+                <div class="conversion">
+                    <input type="button" id="buttonConvertir" value="Convertir" onclick="capturarDatos()">
+                </div>
             </div>
             <div id="resultado">
                 <label id="labelResultado">Conversión</label>

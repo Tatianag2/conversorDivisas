@@ -5,22 +5,20 @@
 }
 
 body{
-    background-image: url('https://papelmatic.com/wp-content/uploads/2020/03/papelmatic-higiene-profesional-microbios-en-el-dinero-980x617.jpg');
+    background-color: rgb(161, 207, 161);
     background-size: cover;
     background-repeat: repeat;
+    display: flex;
+    justify-content: center;
 }
 
 .container{
     background-color: #E7E6E6;
     border-radius: 20px;
     height: 300px;
-    left: 0;
-    margin: 200px auto;
-    right: 0;
-    position:absolute;
+    margin-top: 200px;
     text-align: center;
     width: 700px;
-
 }
 
 img{
@@ -37,7 +35,7 @@ img{
     font-family:Arial, Helvetica, sans-serif;
     font-size: 20px;
     font-weight: 700;
-    height: 30px;
+    height: 10%;
     margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -45,11 +43,11 @@ img{
     text-align: center;
 }
 
-#conversion{
+#seccionConversion{
     display: flex;
-    padding: 20px 20px;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    padding-bottom: 20px;
+    padding-top: 15px;
 }
 
 .elegirMoneda{
@@ -58,9 +56,9 @@ img{
     font-family:Arial, Helvetica, sans-serif;
     font-size: 15px;
     font-weight: 700;
-    height: 30px;
+    height: 100%;
     text-align: center;
-    width: 180px;
+    width: 100%;
 }
 
 #buttonConvertir{
@@ -98,4 +96,38 @@ input::placeholder {
     height: 60px;
     background-color: #FFADA0;
     border-radius: 15px;
+}
+
+@media all and (max-width: 500px) {
+    .container{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 300px;
+        justify-content: center;
+        margin-top: 100px;
+        width: 200px;
+    }
+
+    #seccionConversion{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .conversion{
+        margin: 10px;
+    }
+
+    img{
+        display: none;
+    }
+
+    input::placeholder{
+        font-size: 10px;
+    }
+
+    input:placeholder-shown{
+        text-overflow: ellipsis;
+    }
 }
